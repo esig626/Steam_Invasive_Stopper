@@ -1,0 +1,17 @@
+name: macOS validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compile-and-check:
+    name: Compile Swift listener and check installer
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Validate shell syntax
+        run: bash -n steamoff-setup.sh
+      - name: Compile for macOS
+        run: xcrun swiftc -O Sources/SteamQuit.swift -o "$RUNNER_TEMP/steamoff-event"
