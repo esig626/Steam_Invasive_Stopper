@@ -1,5 +1,7 @@
 # Steam Invasive Stopper
 
+[![macOS only](https://img.shields.io/badge/platform-macOS%20only-343a40)](https://github.com/esig626/Steam_Invasive_Stopper) [![macOS validation](https://github.com/esig626/Steam_Invasive_Stopper/actions/workflows/validate.yml/badge.svg)](https://github.com/esig626/Steam_Invasive_Stopper/actions/workflows/validate.yml) [![MIT licence](https://img.shields.io/badge/licence-MIT-blue)](LICENSE)
+
 **macOS only** · Event driven · No administrator privileges · Fully reversible
 
 Steam can leave its `ipcserver` helper running after you quit the Mac application. **Steam Invasive Stopper**, also called *SteamOff*, watches for Steam's termination event and removes that leftover service automatically. It does not interfere while Steam is open.
